@@ -14,5 +14,5 @@ fun main() {
     val hours = secondTotal / 3600
     val minutes = secondTotal % 3600 / 60
     val second = secondTotal % 60
-    println("$hours:$minutes:$second")
+    println("${String.format("%02d", hours)}:${String.format("%02d", minutes)}:${String.format("%02d", second)}")
 }
