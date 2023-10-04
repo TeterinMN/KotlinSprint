@@ -12,10 +12,11 @@ package lesson_2
  */
 
 fun main () {
+    val percent = 0.2
     val crystalOre = 7
     val ironOre = 11
-    val bonusCrystals = crystalOre * 0.2
-    val bonusIronOre = ironOre * 0.2
+    val bonusCrystals = crystalOre * percent
+    val bonusIronOre = ironOre * percent
     println("Бафф на кристаллическую руду: ${bonusCrystals.toInt()}")
     println("Бафф на железную руду: ${bonusIronOre.toInt()}")
 }
