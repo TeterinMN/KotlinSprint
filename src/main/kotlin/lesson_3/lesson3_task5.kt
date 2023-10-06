@@ -11,11 +11,8 @@ package lesson_3
 
 fun main() {
     val movePlayer = "D2-D4;0"
-    val parts = movePlayer.split(";")
-    val (partOne, partTwo) = parts[0].split("-")
-    val partThree = parts[1]
-
-    println(partOne)
-    println(partTwo)
-    println(partThree)
+    val parts = movePlayer.split("-",";")
+    println(parts[0])
+    println(parts[1])
+    println(parts[2])
 }
