@@ -23,14 +23,14 @@ true/false”
 И типами данных - boolean, boolean, int, String.
  */
 
+const val AIR_HUMIDITY = 20
+const val SEASON = "Зима"
+const val IS_SUNNY = true
+const val IS_AWNING_OPEN = true
 fun main() {
-    val sunnyWeather = true
-    val awningOpen = true
-    val airHumidity = 20
-    val season = "Зима"
     println(
         "Благоприятные ли условия сейчас для роста бобовых? ${
-            sunnyWeather && awningOpen && airHumidity == 20 && season != "Зима"
+            IS_SUNNY && IS_AWNING_OPEN && AIR_HUMIDITY == 20 && SEASON != "Зима"
         }",
     )
 }
