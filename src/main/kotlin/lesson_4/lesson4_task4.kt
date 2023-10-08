@@ -22,17 +22,13 @@ package lesson_4
 
 fun main() {
     val day = 5
-    val exercisesForTheHands: Boolean = day % 2 != 0
-    val legExercises: Boolean = day % 2 == 0
-    val exercisesForTheBack: Boolean = day % 2 == 0
-    val exercisesForThePress: Boolean = day % 2 != 0
-
+    val isEvenDay = day % 2 == 0
     println(
         """
-       Упражнения для рук:    $exercisesForTheHands
-       Упражнения для ног:    $legExercises
-       Упражнения для спины:  $exercisesForTheBack
-       Упражнения для пресса: $exercisesForThePress
+       Упражнения для рук:    ${!isEvenDay}
+       Упражнения для ног:    ${isEvenDay}
+       Упражнения для спины:  ${isEvenDay}
+       Упражнения для пресса: ${!isEvenDay}
     """.trimIndent()
     )
 }
