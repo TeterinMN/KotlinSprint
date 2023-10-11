@@ -38,7 +38,7 @@ fun main () {
     val provisions = readln().toInt()
 
     if ((damage != IS_PRESENCE_OF_DAMAGE && wither == IS_FAVORABLE_WEATHER && numberOfCrew >= MINIMUM_NUMBER_OF_CREW
-        && numberOfCrew <= MAXIMUM_NUMBER_OF_CREW && provisions >= MINIMUM_PROVISIONS) || (damage == IS_PRESENCE_OF_DAMAGE
+        && numberOfCrew <= MAXIMUM_NUMBER_OF_CREW && provisions > MINIMUM_PROVISIONS) || (damage == IS_PRESENCE_OF_DAMAGE
                 && wither == IS_FAVORABLE_WEATHER && numberOfCrew == MAXIMUM_NUMBER_OF_CREW && provisions >= MINIMUM_PROVISIONS))
         println("Корабль может отправится в плавание")
     else
