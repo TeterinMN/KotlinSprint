@@ -11,9 +11,12 @@ package lesson_5
  */
 
 fun main() {
-    print("Для входа в приложение решите пример 5 + 8 = ")
+    val firstTerm = 5
+    val secondTerm = 8
+    print("Для входа в приложение решите пример $firstTerm + $secondTerm = ")
     val answerUser = readln().toInt()
-    val question = 5 + 8
-    if (answerUser == question) println("Добро пожаловать!")
-    else println("Доступ запрещен.")
+    if (firstTerm + secondTerm == answerUser)
+        println("Добро пожаловать!")
+    else
+        println("Доступ запрещен.")
 }
