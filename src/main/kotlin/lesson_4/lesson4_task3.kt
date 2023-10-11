@@ -24,13 +24,17 @@ true/false”
  */
 
 const val AIR_HUMIDITY = 20
-const val SEASON = "Зима"
+const val SEASON = "Лето"
 const val IS_SUNNY = true
 const val IS_AWNING_OPEN = true
 fun main() {
+    val airHumidity = 20
+    val season = "Зима"
+    val isSunny = true
+    val isAwingOpen = true
     println(
         "Благоприятные ли условия сейчас для роста бобовых? ${
-            IS_SUNNY && IS_AWNING_OPEN && AIR_HUMIDITY == 20 && SEASON != "Зима"
+            isSunny == IS_SUNNY && isAwingOpen == IS_AWNING_OPEN && airHumidity == AIR_HUMIDITY && season == SEASON
         }",
     )
 }
