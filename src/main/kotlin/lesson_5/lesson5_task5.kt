@@ -34,8 +34,6 @@ fun main() {
     }
     val result = listNumber.intersect(userListNumber.toSet())
 
-    println(userListNumber)
-    println(result)
     val resultSize = result.size
     when (resultSize) {
         3 -> println("Вы выиграли джекпот")
@@ -43,6 +41,6 @@ fun main() {
         1 -> println("Вы выиграли утешительный приз")
         else -> println("Вы не угадали ни одного числа")
     }
-    println(listNumber)
+    println("Выигрышная комбинация: $listNumber")
 
 }
