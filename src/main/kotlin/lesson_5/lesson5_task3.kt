@@ -14,7 +14,7 @@ package lesson_5
  – Если не угадано ничего, вывести “Неудача! Крутите барабан!”
  */
 
-fun  main() {
+fun main() {
     val firstCorrectNumber = 23
     val secondCorrectNumber = 67
     print("Введите первое число: ")
@@ -22,9 +22,13 @@ fun  main() {
     print("Введите второе число: ")
     val secondNumberUser = readln().toInt()
 
-    if (firstNumberUser == firstCorrectNumber && secondNumberUser == secondCorrectNumber)
+    if (firstNumberUser == firstCorrectNumber
+        && secondNumberUser == secondCorrectNumber
+    )
         println("Поздравляем! Вы выиграли главный приз!")
-    else if (firstNumberUser == firstCorrectNumber || secondNumberUser == secondCorrectNumber)
+    else if (firstNumberUser == firstCorrectNumber || firstNumberUser == secondCorrectNumber
+        || secondNumberUser == secondCorrectNumber || secondNumberUser == firstCorrectNumber
+    )
         println("Вы выиграли утешительный приз!")
     else
         println("Неудача! Крутите барабан!")
