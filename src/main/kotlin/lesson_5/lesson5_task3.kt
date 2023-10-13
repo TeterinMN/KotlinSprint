@@ -22,8 +22,8 @@ fun main() {
     print("Введите второе число: ")
     val secondNumberUser = readln().toInt()
 
-    if (firstNumberUser == firstCorrectNumber
-        && secondNumberUser == secondCorrectNumber
+    if (firstNumberUser == firstCorrectNumber && secondNumberUser == secondCorrectNumber
+        || firstNumberUser == secondCorrectNumber && secondNumberUser == firstCorrectNumber
     )
         println("Поздравляем! Вы выиграли главный приз!")
     else if (firstNumberUser == firstCorrectNumber || firstNumberUser == secondCorrectNumber
