@@ -32,10 +32,8 @@ fun main() {
         val userNumber = readln().toInt()
         userListNumber.add(userNumber)
     }
-    val result = listNumber.intersect(userListNumber.toSet())
-
-    val resultSize = result.size
-    when (resultSize) {
+    val result = listNumber.intersect(userListNumber.toSet()).size
+    when (result) {
         3 -> println("Вы выиграли джекпот")
         2 -> println("Вы выиграли крупный приз")
         1 -> println("Вы выиграли утешительный приз")
