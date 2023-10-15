@@ -9,11 +9,7 @@ package lesson_6
 
 fun main() {
     print("Введите количество секунд: ")
-    val second = readln().toInt()
-    var count = second
-    while (count > 0) {
-        Thread.sleep(1000)
-        count--
-    }
+    val second = readln().toLong()
+    Thread.sleep(second * 1000)
     println("Прошло $second секунд")
 }
