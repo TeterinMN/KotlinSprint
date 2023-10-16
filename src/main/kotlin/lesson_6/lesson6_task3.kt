@@ -11,7 +11,7 @@ package lesson_6
  – таймер должен быть написан, используя цикл while.
  */
 
-fun  main() {
+fun main() {
     print("Введите количество секунд: ")
     var userInput = readln().toLong()
 
@@ -20,6 +20,5 @@ fun  main() {
         Thread.sleep(1000)
         userInput--
     }
-    println()
-    println("Время вышло")
+    println("\nВремя вышло")
 }
