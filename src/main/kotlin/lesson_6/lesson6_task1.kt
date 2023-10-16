@@ -17,7 +17,7 @@ fun main() {
     val userPassword = readln()
     var authenticated = false
 
-    while (true) {
+    while (!authenticated) {
         println("Для входа в приложение авторизуйтесь")
         print("Логин:")
         val tempUserLogin = readln()
