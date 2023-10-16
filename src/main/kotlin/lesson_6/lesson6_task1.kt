@@ -15,8 +15,9 @@ fun main() {
     val userLogin = readln()
     print("Пароль: ")
     val userPassword = readln()
+    var authenticated = false
 
-    while (true) {
+    while (!authenticated) {
         println("Для входа в приложение авторизуйтесь")
         print("Логин:")
         val tempUserLogin = readln()
@@ -24,7 +25,7 @@ fun main() {
         val tempUserPassword = readln()
         if (tempUserLogin == userLogin && tempUserPassword == userPassword) {
             println("Авторизация прошла успешно")
-            break
+            authenticated = true
         } else
             println("Логин или пароль введены неверно")
     }
