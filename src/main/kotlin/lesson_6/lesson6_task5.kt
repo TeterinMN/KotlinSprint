@@ -15,9 +15,10 @@ import kotlin.random.Random
 вывести сообщение "Доступ запрещен".
  */
 
+const val NUMBER_OF_ATTEMPTS = 3
 fun main() {
     var count = 0
-    while (count < 3) {
+    while (count < NUMBER_OF_ATTEMPTS) {
         val numOne = Random.nextInt(1, 10)
         val numTwo = Random.nextInt(1, 10)
         print("Для проверки что вы не бот, решите пример: $numOne + $numTwo = ")
@@ -25,7 +26,7 @@ fun main() {
         val result = numOne + numTwo
         if (result != inputUser) {
             count++
-            if (count == 3) {
+            if (count == NUMBER_OF_ATTEMPTS) {
                 println("Доступ запрещен")
                 break
             }
