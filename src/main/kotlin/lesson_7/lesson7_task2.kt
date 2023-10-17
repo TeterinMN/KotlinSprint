@@ -12,7 +12,6 @@ package lesson_7
 
 fun main() {
     val rangeNumber = 1000..9999
-
     do {
         val randomNumber = rangeNumber.random()
         println("Ваш код авторизации: $randomNumber")
