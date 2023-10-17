@@ -10,14 +10,9 @@ fun main() {
     val numericArray = 0..9
     val characterArray = 'a'..'z'
     var password = ""
-
     for (i in 0..<3) {
         password += numericArray.random()
         password += characterArray.random()
-
     }
     println(password)
-
-
-
 }
