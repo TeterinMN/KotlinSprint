@@ -18,17 +18,17 @@ fun main() {
     val arraySymbol = numberRange + lowercaseLettersRange + capitalLettersRange
     var password = ""
 
-    while (true) {
+    do {
         print("Введите максимальную длину пароля: ")
         val maxLengthPassword = readln().toInt()
         if (maxLengthPassword < MIN_LENGTH_PASSWORD) {
             println("Минимальная длина пароля 6 символов")
             continue
-        } else
+        } else {
             for (i in 1..maxLengthPassword) {
                 password += arraySymbol.random()
             }
-        println(password)
-        break
-    }
+            println(password)
+        }
+    } while (password == "")
 }
