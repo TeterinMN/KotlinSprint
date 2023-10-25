@@ -12,12 +12,14 @@ package lesson_8
  */
 
 fun main() {
-    val listOfIngredients = arrayListOf("курица", "соль", "майонез", "сметана", "чеснок", "перец", "зелень")
+    val listOfIngredients = arrayOf("курица", "соль", "майонез", "сметана", "чеснок", "перец", "зелень")
     print("Введите название искомого ингредиента: ")
     val ingredientSearch = readln()
     for (i in listOfIngredients) {
-        if (i == ingredientSearch)
+        if (i == ingredientSearch) {
             println("Ингредиент $i в рецепте есть")
-        else println("Такого ингредиента в рецепте нет")
+            return
+        }
     }
+    println("Такого ингредиента в рецепте нет")
 }
