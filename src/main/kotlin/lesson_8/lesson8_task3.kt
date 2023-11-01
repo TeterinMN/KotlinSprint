@@ -18,11 +18,8 @@ fun main() {
     val listOfIngredients = arrayOf("курица", "соль", "майонез", "сметана", "чеснок", "перец", "зелень")
     print("Введите название искомого ингредиента: ")
     val ingredientSearch = readln()
-    if (listOfIngredients[0] == ingredientSearch || listOfIngredients[1] == ingredientSearch ||
-        listOfIngredients[2] == ingredientSearch || listOfIngredients[3] == ingredientSearch ||
-        listOfIngredients[4] == ingredientSearch || listOfIngredients[5] == ingredientSearch ||
-        listOfIngredients[6] == ingredientSearch)
-    println("Ингредиент $ingredientSearch в рецепте есть")
+    if (ingredientSearch in listOfIngredients)
+        println("Ингредиент $ingredientSearch в рецепте есть")
     else
-    println("Такого ингредиента в рецепте нет")
+        println("Такого ингредиента в рецепте нет")
 }
