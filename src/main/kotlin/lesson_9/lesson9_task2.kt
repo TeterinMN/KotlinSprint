@@ -19,12 +19,10 @@ fun main() {
     println("В рецепте есть базовые ингредиенты: $listOfIngredients")
     print("Желаете добавить еще? Да/Нет >> ")
     val userAnswer = readln()
-    if (userAnswer == "Да" || userAnswer == "да") {
+    if (userAnswer.equals("Да", ignoreCase = true)) {
         print("Какой ингредиент вы хотите добавить? >> ")
         val userInput = readln()
         listOfIngredients.add(userInput)
-    }
-    else
-        return
+    } else return
     println("Теперь в рецепте есть следующие ингредиенты: $listOfIngredients")
 }
