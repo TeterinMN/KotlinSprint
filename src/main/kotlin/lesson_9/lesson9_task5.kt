@@ -1,5 +1,7 @@
 package lesson_9
 
+import java.util.*
+
 /*
 Задача 5* к Уроку 9.
 Напиши программу, которая запрашивает у пользователя пять названий ингредиентов (каждый по отдельности).
@@ -19,5 +21,6 @@ fun main() {
         count++
     }
     val sortedList = listOfIngredients.sorted().joinToString(", ")
+        .replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
     println(sortedList)
 }
