@@ -11,15 +11,13 @@ package lesson_9
 
 fun main() {
     println("Введите пять ингредиентов:")
-    var listOfIngredients: MutableList<String> = mutableListOf()
+    val listOfIngredients: MutableList<String> = mutableListOf()
     var count = 1
-    for (i in 0..2) {
+    for (i in 0..4) {
         print("Ингредиент №$count - ")
         listOfIngredients.add(readln())
         count++
     }
-    listOfIngredients.sort()
-    val new = listOfIngredients.first().uppercase()
-    listOfIngredients.forEach(){
-    print("$it, ")}
+    val sortedList = listOfIngredients.sorted().joinToString(", ")
+    println(sortedList)
 }
