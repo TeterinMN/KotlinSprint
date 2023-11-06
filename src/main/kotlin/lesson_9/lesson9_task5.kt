@@ -16,11 +16,10 @@ fun main() {
     val listOfIngredients: MutableList<String> = mutableListOf()
     var count = 1
     for (i in 0..4) {
-        print("Ингредиент №$count - ")
+        print("Ингредиент №${count++} - ")
         listOfIngredients.add(readln())
-        count++
     }
     val sortedList = listOfIngredients.sorted().joinToString(", ")
-        .replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
+        .replaceFirstChar { it.titlecase(Locale.getDefault()) }
     println(sortedList)
 }
