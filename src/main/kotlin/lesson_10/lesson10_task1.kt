@@ -12,9 +12,9 @@ package lesson_10
  */
 
 fun main() {
-    val user = cast()
+    val user = throwingTheDice()
     println("Ход игрока: $user")
-    val computer = cast()
+    val computer = throwingTheDice()
     println("Ход компьютера: $computer")
     if (user >= computer) {
         println("Победило человечество")
@@ -22,6 +22,4 @@ fun main() {
 
 }
 
-fun cast(): Int {
-    return (1..6).random()
-}
+fun throwingTheDice(): Int = (1..6).random()
