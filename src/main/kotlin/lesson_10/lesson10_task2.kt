@@ -14,11 +14,11 @@ fun main() {
     val userName = readln()
     print("Придумайте пароль: ")
     val userPassword = readln()
-    validation(userName, userPassword)
+    if (checkPassword(userName, userPassword)) {
+        println("Спасибо за регистрацию!")
+    } else println("Логин или пароль недостаточно длинные")
 }
 
-fun validation(userName: String, userPassword: String) {
-    if (userName.length >= 4 && userPassword.length >= 4)
-        println("Спасибо за регистрацию!")
-    else println("Логин или пароль недостаточно длинные")
+fun checkPassword(userName: String, userPassword: String): Boolean {
+    return userName.length >= 4 && userPassword.length >= 4
 }
