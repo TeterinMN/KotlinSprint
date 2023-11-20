@@ -1,5 +1,3 @@
-@file:Suppress("UNUSED_EXPRESSION")
-
 package lesson_10
 
 /*
@@ -19,35 +17,33 @@ package lesson_10
 const val USER_LOGIN = "Scorpio"
 const val USER_PASSWORD = 12345
 fun main() {
-    val token = login()
-    cart(token)
-
-}
-
-fun login(): String {
-    val number = 0..9
-    val symbol = 'a'..'z'
-    var token = ""
     print("Введите логин: ")
     val userLogin = readln()
     print("Введите пароль: ")
     val userPassword = readln().toInt()
+    val token = login(userLogin, userPassword)
+    if (token != null) {
+        returnShoppingCart(token)
+    } else println("Неудачная попытка авторизации")
+
+}
+
+fun login(userLogin: String, userPassword: Int): String? {
+    val number = 0..9
+    val symbol = 'a'..'z'
+    var token: String? = null
     if (userLogin == USER_LOGIN && userPassword == USER_PASSWORD) {
         for (i in 0..32) {
             token += number.random().toString() + symbol.random()
         }
-    } else null
+    }
     return token
 }
 
-fun cart(token: String) {
+fun returnShoppingCart(token: String) {
     val shoppingCart = listOf("Палатка", "Котелок", "Спальник")
-    if (token == "") {
-        println("Неудачная попытка авторизации")
-    } else {
-        println("Содержимое корзины: ")
-        shoppingCart.forEach {
-            println(it)
-        }
+    println("Содержимое корзины: ")
+    shoppingCart.forEach {
+        println(it)
     }
 }
