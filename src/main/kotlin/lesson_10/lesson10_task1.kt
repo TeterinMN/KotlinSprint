@@ -22,4 +22,4 @@ fun main() {
 
 }
 
-fun throwTheDice(): Int = (1..6).random()
+private fun throwTheDice(): Int = (1..6).random()
