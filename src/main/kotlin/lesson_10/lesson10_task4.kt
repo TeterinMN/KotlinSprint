@@ -33,7 +33,7 @@ fun main() {
     println("Выигрышных партий у человечества: $countUser")
 }
 
-fun throwTheDice(): Int = (1..6).random()
+private fun throwTheDice(): Int = (1..6).random()
 
 fun newRound(): Boolean {
     print("\nХотите бросить кости еще раз? Да/Нет: ")
