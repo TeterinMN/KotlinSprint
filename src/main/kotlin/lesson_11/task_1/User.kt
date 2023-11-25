@@ -1,4 +1,4 @@
-package lesson_11
+package lesson_11.task_1
 
 class User(
     val id: Int,
